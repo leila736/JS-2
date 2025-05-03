@@ -17,14 +17,16 @@
 
 
   <script>
+    for(var j=1; j<=10; ++j){
       for (var i=1; i<=10; ++i) {
         document.write('<button class="btn" onclick="btnRun('+i+');")>'+i+'</button>');
-        document.write ('<br/>');
-
       }
+      document.write('</br>')
+    }
+    
       function btnRun(input) {
         alert(input)
-      }
+     }
 
   </script>
 </body>
