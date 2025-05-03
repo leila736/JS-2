@@ -7,7 +7,11 @@
   <style>
       .btn{
           background-color: bisque;
-          width: 30px;
+          width: 35px;
+          height: 35px;
+      }
+      .btn:hover{
+        background-color: brown;
       }
 
   </style>
@@ -19,11 +23,11 @@
   <script>
     for(var j=1; j<=10; ++j){
       for (var i=1; i<=10; ++i) {
-        document.write('<button class="btn" onclick="btnRun('+i+');")>'+i+'</button>');
+        document.write('<button class="btn" onclick="btnRun('+i*j+');")>'+i*j+'</button>');
       }
       document.write('</br>')
     }
-    
+
       function btnRun(input) {
         alert(input)
      }
