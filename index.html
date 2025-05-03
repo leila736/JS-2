@@ -21,11 +21,20 @@
 
 
   <script>
-    for(var j=1; j<=10; ++j){
-      for (var i=1; i<=10; ++i) {
-        document.write('<button class="btn" onclick="btnRun('+i*j+');")>'+i*j+'</button>');
-      }
-      document.write('</br>')
+    init()
+
+    function init(){
+      for(var j=1; j<=10; ++j){
+        for (var i=1; i<=10; ++i) {
+          var btn = showButton(i*j);
+          document.write(btn);
+        }
+        document.write('</br>')
+     }
+    }
+
+    function showButton (title){
+      return '<button class="btn" onclick="btnRun('+title+');")>'+title+'</button>'
     }
 
       function btnRun(input) {
